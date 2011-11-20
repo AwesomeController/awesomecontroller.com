@@ -32,6 +32,18 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+
+    <script type="text/javascript">
+      function validateForm() {
+        var val = $('#field13781724').val();
+        if (val === 'undefined' || val === '' || val == null) {
+          alert('Please fill in your email so we can contact you. Thanks!');
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
   </head>
   <body>
     <!--<div class="topbar">-->
@@ -55,7 +67,8 @@
         <br/>
         <p>Awesome Controller is an adapter that will allow you to play any retro video game system with modern Bluetooth controllers, like the Sony Dualshock 3 and the Nintendo Wiimote.</p>
         <br/>
-        <form method="post" enctype="multipart/form-data" action="http://www.formstack.com/forms/index.php" class="fsForm fsSingleColumn" id="fsForm1139485" onsubmit="_gaq.push(['_trackEvent', 'email submission', 'home page', $('field13781724').val()]);">
+        <form method="post" enctype="multipart/form-data" action="http://www.formstack.com/forms/index.php" class="fsForm fsSingleColumn" id="fsForm1139485"
+          onsubmit="if (validateForm()) { _gaq.push(['_trackEvent', 'email submission', 'home page', $('#field13781724').val()]); } else { return false; }">
           <input type="hidden" name="form" value="1139485" />
           <input type="hidden" name="viewkey" value="EjlJHQApYh" />
           <input type="hidden" name="hidden_fields" id="hidden_fields1139485" value="" />
