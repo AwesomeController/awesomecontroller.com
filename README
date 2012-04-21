@@ -1,18 +1,41 @@
 Overview
 ========
 
-You won't find the most factored CSS and HTML you have ever seen, but it gets the job done (signing people up to our email list.)
+You won't find the most factored CSS and HTML you have ever seen, 
+but it gets the job done (signing people up to our email list.)
 
 Deployment
 ==========
 
-(This is mostly for the Awesome Controller people to deploy to the production website. Currently we don't have a staging environment or anything.)
+(This is mostly for the Awesome Controller people to deploy to the production website. 
+Currently we don't have a staging environment or anything.)
 
-To deploy to AWS, sign into the AWS console (check the Google Docs 'Accounts' document for the login information.) Then go to the www.awesomecontroller.com bucket. Next, you can choose to upload files manually, which you should do for any files that change. For any subdirectories, you need to upload the documents by navigating to the subfolder and clicking upload. AWS is not smart enough to allow you to upload directories. IMPORTANT: you must set the permissions of any files that you upload to be publicly readable. To do this, either select any documents you need to change the permissions for and right-click on them and say Make Public (blue RSS icon.) If you don't do this for all of the files, you will get an ugly 403 error. Be sure to go any subdirectories that you updated and also make the files there public.
+1. Create a `set_env.sh` script to set environment variables for our AWS access keys. Eg.:
 
-When you deploy, hit the live website and test that everything seems to work as expected. It might take a few seconds for the permission change to take effect, so feel free to refresh a few times in the event that you get an error and believe that you set the permissions up correctly.
+  #! /bin/bash
+
+  export ac_aws_access_key_id=foo;
+  export ac_aws_secret_access_key=bar;
+  export ac_s3_bucket=www.awesomecontroller.com
+
+2. Source `set_env.sh`:
+
+  $ source set_env.sh
+
+3. Deploy to S3.
+
+  $ rake s3
+
+
+When you deploy, hit the live website 
+and test that everything seems to work as expected. 
+It might take a few seconds for the permission change to take effect,
+so feel free to refresh a few times in the event that you get an error 
+and believe that you set the permissions up correctly.
 
 Testing
 =======
 
-You should be able to do normal testing by just looking at the static HTML pages in your browser locally.
+Start a test HTTP server with:
+
+  $ rake preview

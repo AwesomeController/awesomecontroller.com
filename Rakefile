@@ -24,11 +24,10 @@ end
 
 
 def aws_init
-  config = YAML::load(File.open('_config.yml'))
   return {
-    :access_key_id      => config['aws_access_key_id'],
-    :secret_access_key  => config['aws_secret_access_key'],
-    :s3_bucket => config['s3_bucket'],
+    :access_key_id      => ENV['ac_aws_access_key_id'],
+    :secret_access_key  => ENV['ac_aws_secret_access_key'],
+    :s3_bucket => ENV['ac_s3_bucket'],
   }
 end
 
@@ -106,18 +105,14 @@ def cloudfront_invalidate(aws_access_key_id, aws_secret_access_key, distribution
 end
 
 desc "Deploy website to Amazon S3"
-task :s3, :target do |t, args|
-  puts "!! Please provide a deploy target, eg. rake aws:s3[test] !!" unless args.target
-  puts "## Deploying #{args.target} website to Amazon S3"
+task :s3 do
+  puts "## Deploying website to Amazon S3"
   aws = aws_init
-  if args.target == "live" then
-    s3_deploy(aws[:access_key_id], aws[:secret_access_key], aws[:live_s3_bucket], public_dir)
-  elsif args.target == "test" then
-    puts "access #{aws[:access_key_id]} bucket #{aws[:test_s3_bucket]}"
-    s3_deploy(aws[:access_key_id], aws[:secret_access_key], aws[:test_s3_bucket], public_dir)
-  else
-    puts "!! Error. Must specify live or test"
-  end
+  s3_deploy(
+    aws[:access_key_id],
+    aws[:secret_access_key],
+    aws[:s3_bucket],
+    public_dir)
   puts "\n## Amazon S3 deploy complete"
 end
 
