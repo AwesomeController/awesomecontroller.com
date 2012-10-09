@@ -29,37 +29,24 @@
       })();
     </script>
 
-    <script type="text/javascript">
-      function validateForm() {
-        var val = $('#field13781724').val();
-        if (val === 'undefined' || val === '' || val == null) {
-          alert('Please fill in your email so we can contact you. Thanks!');
-          return false;
-        } else {
-          return true;
-        }
-      }
-    </script>
   </head>
   <body>
-    <!--<div class="topbar">-->
-      <!--<div class="fill">-->
-        <!--<div class="container">-->
-          <!--<a class="brand" href="#">Project name</a>-->
-          <!--<ul class="nav">-->
-            <!--<li class="active"><a href="#">Home</a></li>-->
-            <!--<li><a href="#about">About</a></li>-->
-            <!--<li><a href="#contact">Contact</a></li>-->
-          <!--</ul>-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+            <a class="brand" href="#">Awesome Controller</a>
+          <ul class="nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="http://www.kickstarter.com/projects/1604893288/1655032275?token=41eacd58">Back us on Kickstarter</a></li>
+            <li><a href="https://github.com/AwesomeController">Fork us on Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-  <a href="http://github.com/awesomecontroller"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
 
     <div class="container">
       <div>
-        <img src="/static/images/awscont2.jpg" width="880" alt="Awesome Controller Logo" />
       </div>
       <br/>
 
@@ -69,20 +56,15 @@
         <br/>
         <p>Awesome Controller is an adapter that will allow you to play any retro video game system with modern Bluetooth controllers, like the Sony Dualshock 3 and the Nintendo Wiimote.</p>
         <br/>
-        <form method="post" enctype="multipart/form-data" action="http://www.formstack.com/forms/index.php" class="fsForm fsSingleColumn" id="fsForm1139485"
-          onsubmit="if (validateForm()) { _gaq.push(['_trackEvent', 'email submission', 'home page', $('#field13781724').val()]); } else { return false; }">
-          <input type="hidden" name="form" value="1139485" />
-          <input type="hidden" name="viewkey" value="EjlJHQApYh" />
-          <input type="hidden" name="hidden_fields" id="hidden_fields1139485" value="" />
-          <input type="hidden" name="_submit" value="1" />
-          <input type="hidden" name="incomplete" id="incomplete1139485" value="" />
-          <div>
-            <label class="fsLabel" for="field13781724"  style="font-size: 3em; margin-right: 15px; padding-top: 0.35em;">Email</label>
-            <input type="text" id="field13781724" name="field13781724" style="font-size: 3em; height: 1em; margin-right: 15px;" class="span7 fsField fsFormatEmail" />
-            <input id="fsSubmitButton1139485" class="fsSubmitButton btn success large" style="margin:0; position: relative; top: -4px; font-size: 2em;" type="submit" value="I want it!" />
-          </div>
-      </form>
-    </div>
+        <div class="row">
+          <center>
+            <button class="btn success large btn-block block"
+              style="font-size: 2em;">
+              Back us on Kickstarter!
+            </button>
+          </center>
+        </div>
+      </div>
 
     <!-- Example row of columns -->
     <div class="row">
@@ -110,19 +92,50 @@
     </div>
 
     <div style="padding-top: 3em;">
-    <center>
-      An overview of what Awesome Controller does.<br/>
-      <iframe width="560" height="315" src="http://www.youtube.com/embed/NGqAh-_saZc" frameborder="0" allowfullscreen></iframe>
-    </center>
-    <br/>
-    <br/>
-  </div>
+      <center>
+        Back us on Kickstarter!<br/>
+        <iframe width="640" height="360" src="http://www.youtube.com/embed/K4YggRKspmg" frameborder="0" allowfullscreen></iframe>
+      </center>
+      <br/>
+      <br/>
+    </div>
+
+    <div style="padding-top: 3em;">
+      <center>
+        An overview of what Awesome Controller does.<br/>
+        <iframe width="640" height="360"
+          src="http://www.youtube.com/embed/NGqAh-_saZc" frameborder="0" allowfullscreen></iframe>
+      </center>
+      <br/>
+      <br/>
+    </div>
 
     <center>
       <div>
         From the players of games including Final Fantasy, Goldeneye, and Super Smash Bros. Melee.
       </div>
     </center>
+
+    <div style="padding-top: 3em;">
+      <center>
+        <form method="post" enctype="multipart/form-data" action="http://www.formstack.com/forms/index.php" class="fsForm fsSingleColumn" id="fsForm1139485"
+          onsubmit="if (validateForm()) { _gaq.push(['_trackEvent', 'email submission', 'home page', $('#field13781724').val()]); } else { return false; }">
+          <input type="hidden" name="form" value="1139485" />
+          <input type="hidden" name="viewkey" value="EjlJHQApYh" />
+          <input type="hidden" name="hidden_fields" id="hidden_fields1139485" value="" />
+          <input type="hidden" name="_submit" value="1" />
+          <input type="hidden" name="incomplete" id="incomplete1139485" value="" />
+          <p>Interested in project updates, status, and just plain Awesome&trade; emails from the Awesome Controller team?</p>
+          <div class="clearfix">
+            <label class="fsLabel" for="field13781724"  style="font-size: 1.5em;">Email</label>
+            <div class="input">
+              <input type="text" id="field13781724" name="field13781724" class="xlinput span9 fsField fsFormatEmail" />
+              <input id="fsSubmitButton1139485" class="fsSubmitButton btn success large" type="submit" value="Hook me up!" />
+            </div>
+          </div>
+        </form>
+      </center>
+    </div>
 
     <footer>
       <center>
@@ -138,5 +151,16 @@
 
     </div> <!-- /container -->
 
+    <script type="text/javascript">
+      function validateForm() {
+        var val = $('#field13781724').val();
+        if (val === 'undefined' || val === '' || val == null) {
+          alert('Please fill in your email so we can contact you. Thanks!');
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script>
   </body>
 </html>
