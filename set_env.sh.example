@@ -1,0 +1,4 @@
+#!/bin/bash
+export ac_aws_access_key_id=foo;
+export ac_aws_secret_access_key=bar;
+export ac_s3_bucket=www.awesomecontroller.com

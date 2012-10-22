@@ -10,22 +10,17 @@ Deployment
 (This is mostly for the Awesome Controller people to deploy to the production website. 
 Currently we don't have a staging environment or anything.)
 
-1. Create a `set_env.sh` script to set environment variables for our AWS access keys. Eg.:
+1. Run bundle to get the required gems.
 
-  #! /bin/bash
+2. Create a `set_env.sh` script to set environment variables for our AWS access keys.
+   This file is ignored by default in the directory.
 
-  export ac_aws_access_key_id=foo;
-  export ac_aws_secret_access_key=bar;
-  export ac_s3_bucket=www.awesomecontroller.com
+  $ cp set_env.sh.example set_env.sh
+  Then edit to be the right values
 
-2. Source `set_env.sh`:
+3. Run the deploy script
 
-  $ source set_env.sh
-
-3. Deploy to S3.
-
-  $ rake s3
-
+  $ source set_env.sh && rake s3
 
 When you deploy, hit the live website 
 and test that everything seems to work as expected. 
