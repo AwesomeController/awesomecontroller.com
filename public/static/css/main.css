@@ -14,6 +14,16 @@ body {
   background: none;
 }
 
+.hero-unit h1 {
+  text-align: center;
+  font-size: 44px;
+  line-height: 52px;
+}
+
+.hero-unit .explanation {
+  text-align: center;
+}
+
 hr {
   height: 20px;
   background: url('../images/ground.png') bottom left repeat-x;
