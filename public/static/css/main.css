@@ -3,3 +3,52 @@
   padding-top: 1em;
   line-height: 1.5em;
 }
+
+.hero-unit {
+  margin-top: 40px;
+  border-radius: 0;
+}
+
+.benefit img {
+  float: left;
+  margin: 10px 15px 0 0;
+}
+
+.videos {
+  margin-bottom: 2em;
+}
+
+.videos .span6 {
+  text-align: center;
+}
+
+.videos iframe {
+  width: 400px;
+  height: 225px;
+}
+
+.players {
+  margin-top: 30px;
+}
+
+.sign-up h3, h4 {
+  text-align: center;
+}
+
+.sign-up p {
+  text-align: center;
+}
+
+.sign-up form .controls {
+  margin-left: 20px;
+}
+
+.sign-up form input[type='text'] {
+  font-size: 20px;
+  line-height: 28px;
+  height: 28px;
+}
+
+footer {
+  margin-top: 1em;
+}
