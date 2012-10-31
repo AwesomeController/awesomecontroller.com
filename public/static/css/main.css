@@ -52,11 +52,16 @@ header, section{
   min-width: 1000px; /* tmp */
 }
 
-
 header{
   text-align: center;
   padding-top: 3%;
   min-width: 1000px;
+}
+
+header .team{
+  position: absolute;
+  bottom: 83px;
+  left: 30%;
 }
 
 .cloud{
@@ -72,6 +77,20 @@ header{
   z-index: 1;
   position: absolute;
   overflow: hidden;
+}
+
+#alex{
+  width: 150px;
+  height: 160px;
+  bottom: 140px;
+  right: 15%;
+  background: transparent url('/static/images/alex_overbeck_flat.png') top left no-repeat;
+  position: fixed;
+  z-index: 13;
+}
+
+#alex:hover{
+  background-image: url('/static/images/alex_overbeck_jumping.png');
 }
 
 header:before, section:before{
