@@ -118,6 +118,7 @@ header .team{
   position: absolute;
   bottom: 83px;
   left: 30%;
+  z-index: 13;
 }
 
 .cloud{
