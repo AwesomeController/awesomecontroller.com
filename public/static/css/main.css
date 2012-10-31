@@ -4,6 +4,7 @@ html, body{
 *{
   padding: 0;
   margin: 0;
+  font-family: '04b03'; 
 }
 
 #container{
@@ -58,6 +59,61 @@ header{
   min-width: 1000px;
 }
 
+
+header:before, section:before{
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  bottom: 63px;
+  background: transparent url('/static/images/grass.png') 0 90% repeat-x;
+  content: "";
+  z-index: 12;
+}
+
+section.explanation .graphic{
+  box-sizing: border-box;
+  padding: 115px 70px 100px 95px;
+  width: 720px;
+  height: 480px;
+  color: #333;
+  position: absolute;
+  bottom: 99px;
+  background: transparent url('/static/images/billboard.png') bottom left no-repeat;
+  text-align: center;
+}
+
+section.explanation .graphic img{
+  width: 300px;
+}
+
+section.videos:before{
+  background-image: url('/static/images/sidewalk.png');
+}
+
+section.videos:after{
+  position: absolute;
+  width: 64px;
+  height: 36px;
+  left: 0;
+  bottom: 63px;
+  content: "";
+  z-index: 12;
+  background: transparent url('/static/images/grass_to_sidewalk.png') 0 90% no-repeat;
+}
+
+.video{
+  box-sizing: border-box;
+  padding: 35px 210px 55px 70px;
+  width: 640px;
+  height: 256px;
+  color: #333;
+  position: absolute;
+  bottom: 86px;
+  background: transparent url('/static/images/truck1b.png') bottom left no-repeat;
+  text-align: center;
+  z-index: 9;
+}
+
 header .team{
   position: absolute;
   bottom: 83px;
@@ -84,22 +140,13 @@ header .team{
   height: 160px;
   bottom: 140px;
   right: 15%;
-  background: transparent url('/static/images/alex_overbeck_flat.png') top left no-repeat;
+  background: transparent url('/static/images/alex_flat_animated.gif') top left no-repeat;
   position: fixed;
   z-index: 13;
 }
 
 #alex:hover{
-  background-image: url('/static/images/alex_overbeck_jumping.png');
-}
-
-header:before, section:before{
-  position: absolute;
-  width: 100%;
-  height: 36px;
-  bottom: 63px;
-  background: transparent url('/static/images/grass.png') 0 90% repeat-x;
-  content: "";
+  background-image: url('/static/images/alex_jumping_animated.gif');
 }
 
 footer{
