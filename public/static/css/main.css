@@ -89,7 +89,7 @@ section.explanation .graphic img{
   width: 300px;
 }
 
-section.videos:before{
+section.sidewalk:before{
   background-image: url('/static/images/sidewalk.png');
 }
 
@@ -108,14 +108,14 @@ section.videos:after{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   padding: 15px 220px 55px 70px;
-  width: 640px;
-  height: 256px;
+  width: 564px;
+  height: 272px;
   color: #000;
   position: absolute;
-  bottom: 99px;
+  bottom: 40px;
   background: transparent url('/static/images/truck1.png') bottom left no-repeat;
   text-align: center;
-  z-index: 9;
+  z-index: 13;
 }
 
 header .team{
@@ -123,6 +123,84 @@ header .team{
   bottom: 83px;
   left: 30%;
   z-index: 13;
+}
+
+.features{
+  min-width: 2000px;
+}
+
+.feature{
+  position: absolute;
+  bottom: 95px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.feature h3{
+  position: absolute;
+  font-size: 24px;
+  color: #aa0200;
+  text-shadow: 2px 2px 0 #dd9493;
+}
+
+.feature p{
+  position: absolute;
+  line-height: 1.4;
+  font-size: 17px;
+}
+
+.feature:first-child{
+  width: 528px;
+  height: 400px;
+  background: transparent url('/static/images/building_1.png') bottom left no-repeat;
+}
+
+.feature:first-child h3{
+  bottom: 263px;
+  left: 120px;
+}
+
+.feature:first-child p{
+  top: 230px;
+  left: 218px;
+  width: 186px;
+}
+
+.feature:last-child{
+  left: 967px;
+  width: 528px;
+  height: 456px;
+  background: transparent url('/static/images/building_2.png') bottom left no-repeat;
+}
+
+.feature:last-child h3{
+  top: 30px;
+  left: 162px;
+}
+
+.feature:last-child p{
+  top: 154px;
+  left: 73px;
+  width: 328px;
+}
+
+
+.feature:nth-child(2){
+  left: 417px;
+  width: 580px;
+  height: 704px;
+  background: transparent url('/static/images/building3_hifi.png') bottom left no-repeat;
+}
+
+.feature:nth-child(2) h3{
+  bottom: 260px;
+  left: 162px;
+}
+
+.feature:nth-child(2) p{
+  bottom: 200px;
+  left: 130px;
+  width: 358px;
 }
 
 .cloud{
