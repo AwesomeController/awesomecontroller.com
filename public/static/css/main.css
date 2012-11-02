@@ -16,6 +16,9 @@ html, body{
   height: 100%;
   min-width: 100%;
   z-index: 11;
+
+  background: transparent url('/static/images/hills.gif') bottom left repeat-x;
+  
 }
 
 .tagline{
@@ -103,13 +106,14 @@ section.videos:after{
 
 .video{
   box-sizing: border-box;
-  padding: 35px 210px 55px 70px;
+  -moz-box-sizing: border-box;
+  padding: 15px 220px 55px 70px;
   width: 640px;
   height: 256px;
-  color: #333;
+  color: #000;
   position: absolute;
-  bottom: 86px;
-  background: transparent url('/static/images/truck1b.png') bottom left no-repeat;
+  bottom: 99px;
+  background: transparent url('/static/images/truck1.png') bottom left no-repeat;
   text-align: center;
   z-index: 9;
 }
