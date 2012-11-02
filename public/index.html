@@ -18,6 +18,7 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/jqfloat.js"></script>
+    <script type="text/javascript" src="/static/js/horizontal-scroll.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function(){
@@ -39,6 +40,21 @@
         }
 
         $('#alex').jqFloat({width:125, height: 125, speed: 1500});
+
+        $('#time-of-day-toggle').click().toggle(
+          function() {
+            $('#sky').attr('class', 'dusk');
+            $('#time-of-day').attr('class', 'dusk');
+          },
+          function() {
+            $('#sky').attr('class', 'night');
+            $('#time-of-day').attr('class', 'night');
+          },
+          function() {
+            $('#sky').attr('class', 'day');
+            $('#time-of-day').attr('class', 'day');
+          }
+        );
       })
     </script>
     <!-- google analytics -->
@@ -56,6 +72,9 @@
   </head>
 
   <body>
+    <div id="sky" class="day"></div>
+    <div id="time-of-day" class="day"></div>
+    <div id="time-of-day-toggle">Time of day</div>
     <div id="container">
       <div class="level">
         <header>
@@ -66,10 +85,10 @@
 
           <div class="team">
             <img src="/static/images/toumey.png" alt="Alex Toumey, Raconteur" />
-            <img src="/static/images/kyle.png" alt="Kyle Shipley, Towel" />
+            <img src="/static/images/kyle.png" alt="Kyle Shipley, Towel Enthusiast" />
             <img src="/static/images/wes.png" alt="Wes Winham, Economist" />
-            <img src="/static/images/anthony.png" alt="Anthony Panozza, Godfather" />
-            <img src="/static/images/kail.png" alt="Kail Keusch, Rocket Man" />
+            <img src="/static/images/anthony.png" alt="Anthony Panozzo, Wizzrobe Collector" />
+            <img src="/static/images/kail.png" alt="Kail Keusch, Electrician" />
           </div>
         </header>
 
