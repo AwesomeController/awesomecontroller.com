@@ -40,6 +40,21 @@
         }
 
         $('#alex').jqFloat({width:125, height: 125, speed: 1500});
+
+        $('#time-of-day-toggle').click().toggle(
+          function() {
+            $('#sky').attr('class', 'dusk');
+            $('#time-of-day').attr('class', 'dusk');
+          },
+          function() {
+            $('#sky').attr('class', 'night');
+            $('#time-of-day').attr('class', 'night');
+          },
+          function() {
+            $('#sky').attr('class', 'day');
+            $('#time-of-day').attr('class', 'day');
+          }
+        );
       })
     </script>
     <!-- google analytics -->
@@ -57,6 +72,9 @@
   </head>
 
   <body>
+    <div id="sky" class="day"></div>
+    <div id="time-of-day" class="day"></div>
+    <div id="time-of-day-toggle">Time of day</div>
     <div id="container">
       <div class="level">
         <header>
