@@ -286,6 +286,16 @@ footer {
   //background-color: #aaa;
 }
 
+.other {
+  min-width: 2000px;
+}
+
+#mailbox {
+  background-image: transparent url('/static/images/mailbox.gif');
+  width: 80px;
+  height: 160px;
+}
+
 #time-of-day-toggle.day { background-image: url('/static/images/sun.png'); }
 #time-of-day-toggle.dusk { background-image: url('/static/images/sun.png'); }
 #time-of-day-toggle.night { background-image: url('/static/images/moon.png'); }
