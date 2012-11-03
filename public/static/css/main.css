@@ -49,7 +49,7 @@ body:after {
 
 .level{
   display: table-row;
-  background: transparent url('/static/images/ground_big.png') bottom left repeat-x;
+  background: transparent url('/static/images/street.png') bottom left repeat-x;
 }
 
 .button{
@@ -93,6 +93,12 @@ header:before, section:before{
   z-index: 12;
 }
 
+header:before{
+  height: 100px;
+  bottom: 0;
+  background: transparent url('/static/images/grass_and_ground.png') 0 90% repeat-x;
+}
+
 section.explanation .graphic{
   box-sizing: border-box;
   padding: 115px 70px 100px 95px;
@@ -109,11 +115,11 @@ section.explanation .graphic img{
   width: 300px;
 }
 
-section.sidewalk:before{
-  background-image: url('/static/images/sidewalk.png');
+section:before{
+  background-image: url('/static/images/sidewalk_new@4x.png');
 }
 
-section.videos:after{
+/*section.videos:after{
   position: absolute;
   width: 64px;
   height: 36px;
@@ -122,6 +128,17 @@ section.videos:after{
   content: "";
   z-index: 12;
   background: transparent url('/static/images/grass_to_sidewalk.png') 0 90% no-repeat;
+}*/
+
+section.explanation:after{
+  position: absolute;
+  width: 180px;
+  height: 100px;
+  left: 0;
+  bottom: 0px;
+  content: "";
+  z-index: 12;
+  background: transparent url('/static/images/road_transition.png') 0 90% no-repeat;
 }
 
 .video{
