@@ -169,7 +169,7 @@ header .team{
 
 .feature{
   position: absolute;
-  bottom: 95px;
+  bottom: 99px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
@@ -224,7 +224,7 @@ header .team{
 
 
 .feature:nth-child(2){
-  left: 417px;
+  left: 468px;
   width: 580px;
   height: 704px;
   background: transparent url('/static/images/building3_hifi.png') bottom left no-repeat;
@@ -232,12 +232,12 @@ header .team{
 
 .feature:nth-child(2) h3{
   bottom: 260px;
-  left: 162px;
+  left: 120px;
 }
 
 .feature:nth-child(2) p{
   bottom: 200px;
-  left: 130px;
+  left: 95px;
   width: 358px;
 }
 
