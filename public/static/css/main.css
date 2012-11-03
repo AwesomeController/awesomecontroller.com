@@ -87,7 +87,7 @@ header:before, section:before{
   position: absolute;
   width: 100%;
   height: 36px;
-  bottom: 63px;
+  bottom: 64px;
   background: transparent url('/static/images/grass.png') 0 90% repeat-x;
   content: "";
   z-index: 12;
@@ -118,7 +118,7 @@ section.videos:after{
   width: 64px;
   height: 36px;
   left: 0;
-  bottom: 63px;
+  bottom: 64px;
   content: "";
   z-index: 12;
   background: transparent url('/static/images/grass_to_sidewalk.png') 0 90% no-repeat;
