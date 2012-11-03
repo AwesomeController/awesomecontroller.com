@@ -42,9 +42,18 @@
         $('#alex').jqFloat({width:125, height: 125, speed: 1500});
 
         $('#time-of-day-toggle').click().toggle(
-          function() { $('#sky').attr('class', 'dusk'); },
-          function() { $('#sky').attr('class', 'night'); },
-          function() { $('#sky').attr('class', 'day'); }
+          function() {
+            $('#sky').attr('class', 'dusk');
+            $('#time-of-day-toggle').attr('class', 'dusk');
+          },
+          function() {
+            $('#sky').attr('class', 'night');
+            $('#time-of-day-toggle').attr('class', 'night');
+          },
+          function() {
+            $('#sky').attr('class', 'day');
+            $('#time-of-day-toggle').attr('class', 'day');
+          }
         );
       })
     </script>
@@ -64,7 +73,7 @@
 
   <body>
     <div id="sky" class="day"></div>
-    <div id="time-of-day-toggle">Time of day</div>
+    <div id="time-of-day-toggle" class="day"></div>
     <div id="container">
       <div class="level">
         <header>
