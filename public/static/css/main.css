@@ -124,7 +124,7 @@ section.explanation:after{
   height: 272px;
   color: #000;
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 200px;
   background: transparent url('/static/images/truck1.png') bottom left no-repeat;
   text-align: center;
@@ -179,6 +179,24 @@ header .team{
   width: 186px;
 }
 
+.feature:nth-child(2){
+  left: 468px;
+  width: 580px;
+  height: 704px;
+  background: transparent url('/static/images/building3_hifi.png') bottom left no-repeat;
+}
+
+.feature:nth-child(2) h3{
+  bottom: 260px;
+  left: 120px;
+}
+
+.feature:nth-child(2) p{
+  bottom: 200px;
+  left: 95px;
+  width: 358px;
+}
+
 .feature:last-child{
   left: 967px;
   width: 528px;
@@ -197,23 +215,18 @@ header .team{
   width: 328px;
 }
 
-
-.feature:nth-child(2){
-  left: 468px;
-  width: 580px;
-  height: 704px;
-  background: transparent url('/static/images/building3_hifi.png') bottom left no-repeat;
-}
-
-.feature:nth-child(2) h3{
-  bottom: 260px;
-  left: 120px;
-}
-
-.feature:nth-child(2) p{
-  bottom: 200px;
-  left: 95px;
-  width: 358px;
+.feature:last-child:after {
+  position: absolute;
+  width: 624px;
+  height: 606px;
+  right: -566px;
+  bottom: 0px;
+  content: " ";
+  z-index: 11;
+  background: url('/static/images/bush_with_flower.png') left bottom no-repeat,
+              url('/static/images/bush.png') 70px bottom no-repeat,
+              url('/static/images/bush.png') 260px bottom no-repeat,
+              url('/static/images/tree.png') 10px bottom no-repeat;
 }
 
 .cloud{
@@ -254,7 +267,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 40px;
+  height: 20px;
 }
 
 #time-of-day-toggle {
