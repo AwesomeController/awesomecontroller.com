@@ -119,9 +119,9 @@ section.explanation:after{
 .video{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  padding: 15px 220px 55px 70px;
+  padding: 25px 220px 55px 55px;
   width: 564px;
-  height: 272px;
+  height: 304px;
   color: #000;
   position: absolute;
   bottom: 20px;
@@ -129,6 +129,12 @@ section.explanation:after{
   background: transparent url('/static/images/truck1.png') bottom left no-repeat;
   text-align: center;
   z-index: 13;
+}
+
+.video iframe {
+  width: 320px;
+  height: 180px;
+  border: 4px solid black;
 }
 
 header .team{
