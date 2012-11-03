@@ -49,7 +49,6 @@ body:after {
 
 .level{
   display: table-row;
-  background: transparent url('/static/images/ground_big.png') bottom left repeat-x;
 }
 
 .button{
@@ -86,9 +85,9 @@ header{
 header:before, section:before{
   position: absolute;
   width: 100%;
-  height: 36px;
-  bottom: 64px;
-  background: transparent url('/static/images/grass.png') 0 90% repeat-x;
+  height: 100px;
+  bottom: 0px;
+  background: transparent url('/static/images/grass_and_ground.png') 0 90% repeat-x;
   content: "";
   z-index: 12;
 }
@@ -110,18 +109,18 @@ section.explanation .graphic img{
 }
 
 section.sidewalk:before{
-  background-image: url('/static/images/sidewalk.png');
+  background-image: url('/static/images/sidewalk_and_street.png');
 }
 
 section.videos:after{
   position: absolute;
-  width: 64px;
-  height: 36px;
+  width: 180px;
+  height: 100px;
   left: 0;
-  bottom: 64px;
+  bottom: 0;
   content: "";
   z-index: 12;
-  background: transparent url('/static/images/grass_to_sidewalk.png') 0 90% no-repeat;
+  background: transparent url('/static/images/road_transition.png') 0 90% no-repeat;
 }
 
 .video{
@@ -133,6 +132,7 @@ section.videos:after{
   color: #000;
   position: absolute;
   bottom: 40px;
+  left: 200px;
   background: transparent url('/static/images/truck1.png') bottom left no-repeat;
   text-align: center;
   z-index: 13;
