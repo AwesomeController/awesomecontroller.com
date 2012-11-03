@@ -283,17 +283,22 @@ footer {
   left: -10px;
   position: absolute;
   z-index: 100;
-  //background-color: #aaa;
 }
 
 .connect {
   min-width: 2000px;
 }
 
+.connection {
+  position: absolute;
+  bottom: 99px;
+}
+
 #mailbox {
-  background-image: transparent url('/static/images/mailbox.gif');
+  background-image: url('/static/images/mailbox.gif');
   width: 80px;
   height: 160px;
+  z-index: 12;
 }
 
 #time-of-day-toggle.day { background-image: url('/static/images/sun.png'); }
