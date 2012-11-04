@@ -235,6 +235,79 @@ header .team{
               url('/static/images/tree.png') 10px bottom no-repeat;
 }
 
+.connect {
+  min-width: 2000px;
+}
+
+.social {
+  position: absolute;
+  bottom: 99px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 1200px;
+  height: 496px;
+  background: url('/static/images/tree.png') 700px bottom no-repeat;
+}
+
+.social a.twitter {
+  position: absolute;
+  left: 930px;
+  bottom: 275px;
+  width: 80px;
+  height: 80px;
+  z-index: 13;
+  text-indent: -9999px;
+  background-image: url('/static/images/twitter_bird.png');
+}
+
+.social a.facebook {
+  position: absolute;
+  left: 820px;
+  bottom: 260px;
+  width: 128px;
+  height: 96px;
+  z-index: 12;
+  text-indent: -9999px;
+  background-image: url('/static/images/facebook_birdhouse.png');
+}
+
+.social a.github {
+  position: absolute;
+  left: 933px;
+  bottom: 40px;
+  width: 108px;
+  height: 64px;
+  z-index: 12;
+  text-indent: -9999px;
+  background-image: url('/static/images/github_octocat.png');
+  transform: rotate(-90deg);
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+  -o-transform:rotate(90deg); /* Opera */
+}
+
+.social a.google_plus {
+  position: absolute;
+  left: 1100px;
+  bottom: -4px;
+  width: 232px;
+  height: 192px;
+  z-index: 10;
+  text-indent: -9999px;
+  background-image: url('/static/images/google_plus_flag.png');
+}
+
+#mailbox {
+  position: absolute;
+  left: 500px;
+  bottom: 95px;
+  width: 80px;
+  height: 160px;
+  z-index: 12;
+  background-image: url('/static/images/mailbox.gif');
+}
+
 .cloud{
   position: relative;
   width: 100px;
@@ -283,22 +356,6 @@ footer {
   left: -10px;
   position: absolute;
   z-index: 100;
-}
-
-.connect {
-  min-width: 2000px;
-}
-
-.connection {
-  position: absolute;
-  bottom: 99px;
-}
-
-#mailbox {
-  background-image: url('/static/images/mailbox.gif');
-  width: 80px;
-  height: 160px;
-  z-index: 12;
 }
 
 #time-of-day-toggle.day { background-image: url('/static/images/sun.png'); }
