@@ -90,7 +90,8 @@ section.explanation .graphic{
 }
 
 section.explanation .graphic img{
-  width: 300px;
+  width: 425px;
+  margin-top: 25px;
 }
 
 /*section.videos:after{
