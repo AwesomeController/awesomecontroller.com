@@ -305,8 +305,25 @@ header .team{
   bottom: 95px;
   width: 80px;
   height: 160px;
-  z-index: 12;
+  z-index: 11;
   background-image: url('/static/images/mailbox.gif');
+}
+
+#signup {
+  display: none;
+  background-color: #eec;
+  border: 3px #333 solid;
+  padding: 5px;
+  position: absolute;
+  left: 500px;
+  bottom: 95px;
+  width: 180px;
+  height: 180px;
+  z-index: 12;
+}
+
+#field13781724 {
+  font-size: 16px;
 }
 
 .cloud{

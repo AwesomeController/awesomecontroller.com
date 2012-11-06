@@ -55,6 +55,11 @@
             $('#time-of-day-toggle').attr('class', 'day');
           }
         );
+
+        $('#mailbox').click(function() {
+          console.log('mailbox clicked');
+          $('#signup').toggle();
+        });
       })
     </script>
     <!-- google analytics -->
@@ -124,7 +129,25 @@
         </section>
 
         <section class="connect">
-          <div id="mailbox"></div>
+          <div id="signup">
+            <h3>Sign up for our mailing list!</h3>
+            <form method="post" enctype="multipart/form-data"
+              action="http://www.formstack.com/forms/index.php"
+              class="fsForm fsSingleColumn form-horizontal" id="fsForm11"
+              onsubmit="console.log('submit');// _gaq.push(['_trackEvent', 'email submission', 'home page', $('#field13781724').val()]); }">
+              <input type="hidden" name="form" value="1139485" />
+              <input type="hidden" name="viewkey" value="EjlJHQApYh" />
+              <input type="hidden" name="hidden_fields" id="hidden_fields1139485" value="" />
+              <input type="hidden" name="_submit" value="1" />
+              <input type="hidden" name="incomplete" id="incomplete1139485" value="" />
+              <div class="control-group">
+                <div class="controls">
+                  <input type="text" id="field13781724" name="field13781724" placeholder="Email" required="required" />
+                  <input id="fsSubmitButton1139485" type="submit" value="Hook me up!" />
+                </div>
+              </div>
+            </form>
+          </div>
           <div class="social">
             <a class="twitter" href="http://twitter.com/#!/awesomecontrol">Twitter</a>
             <a class="facebook" href="http://www.facebook.com/pages/Awesome-Controller/219531528116786">Facebook</a>
@@ -132,6 +155,7 @@
             <a class="google_plus" href="https://plus.google.com/u/0/107680898870883767236">Google Plus</a>
             <a class="blog" href="http://blog.awesomecontroller.com/"></a>
           </div>
+          <div id="mailbox"></div>
         </section>
       </div>
     </div>
@@ -142,17 +166,5 @@
     </footer>
 
     <div id="alex"></div>
-
-    <script type="text/javascript">
-      function validateForm() {
-        var val = $('#field13781724').val();
-        if (val === 'undefined' || val === '' || val == null) {
-          alert('Please fill in your email so we can contact you. Thanks!');
-          return false;
-        } else {
-          return true;
-        }
-      }
-    </script>
   </body>
 </html>
