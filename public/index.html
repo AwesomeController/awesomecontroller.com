@@ -57,10 +57,15 @@
         );
 
         $('#mailbox').click(function() {
-          console.log('mailbox clicked');
           $('#signup').toggle();
         });
-      })
+
+        $('#container').click(function(event) {
+          if (!$(event.target).closest('#mailbox, #signup').length) {
+            $('#signup').hide();
+          }
+        });
+      });
     </script>
     <!-- google analytics -->
     <script type="text/javascript">
