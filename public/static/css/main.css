@@ -79,6 +79,7 @@ section:before{
 
 section.explanation .graphic{
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
   padding: 115px 70px 100px 95px;
   width: 720px;
   height: 480px;
@@ -87,6 +88,11 @@ section.explanation .graphic{
   bottom: 99px;
   background: transparent url('/static/images/billboard.png') bottom left no-repeat;
   text-align: center;
+}
+
+section.explanation .graphic p {
+  text-align: left;
+  line-height: 20px;
 }
 
 section.explanation .graphic img{
