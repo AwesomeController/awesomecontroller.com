@@ -114,9 +114,9 @@ section.explanation .graphic img{
 
 section.explanation:after{
   position: absolute;
-  width: 180px;
+  width: 240px;
   height: 100px;
-  left: 0;
+  left: -108px;
   bottom: 0px;
   content: "";
   z-index: 12;
@@ -238,7 +238,7 @@ header .team{
   z-index: 11;
   background: url('/static/images/bush_with_flower.png') left bottom no-repeat,
               url('/static/images/bush.png') 70px bottom no-repeat,
-              url('/static/images/bush.png') 260px bottom no-repeat,
+              url('/static/images/bush.png') 255px bottom no-repeat,
               url('/static/images/tree.png') 10px bottom no-repeat;
 }
 
@@ -258,8 +258,8 @@ header .team{
 
 .social a.twitter {
   position: absolute;
-  left: 930px;
-  bottom: 275px;
+  left: 1022px;
+  bottom: 148px;
   width: 80px;
   height: 80px;
   z-index: 13;
@@ -269,10 +269,10 @@ header .team{
 
 .social a.facebook {
   position: absolute;
-  left: 820px;
-  bottom: 260px;
-  width: 128px;
-  height: 96px;
+  left: 920px;
+  bottom: 130px;
+  width: 118px;
+  height: 100px;
   z-index: 12;
   text-indent: -9999px;
   background-image: url('/static/images/facebook_birdhouse.png');
@@ -280,7 +280,7 @@ header .team{
 
 .social a.github {
   position: absolute;
-  left: 933px;
+  left: 930px;
   bottom: 40px;
   width: 108px;
   height: 64px;
@@ -296,7 +296,7 @@ header .team{
 
 .social a.google_plus {
   position: absolute;
-  left: 700px;
+  left: 750px;
   bottom: 0px;
   width: 84px;
   height: 124px;
