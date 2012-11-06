@@ -55,7 +55,18 @@
             $('#time-of-day-toggle').attr('class', 'day');
           }
         );
-      })
+
+        $('#mailbox').click(function() {
+          _gaq.push(['_trackEvent', 'opened mailbox', 'home page']);
+          $('#signup').toggle();
+        });
+
+        $('#container').click(function(event) {
+          if (!$(event.target).closest('#mailbox, #signup').length) {
+            $('#signup').hide();
+          }
+        });
+      });
     </script>
     <!-- google analytics -->
     <script type="text/javascript">
@@ -93,7 +104,7 @@
 
         <section class="explanation">
           <div class="graphic">
-            <p><strong>Awesome Controller</strong> is an adapter that allows you to play any retro video game system with modern Bluetooth controllers, like the Sony Dualshock 3 and the Nintendo Wiimote.</p>
+            <p><strong style="color: red; font-size: 24px;">Awesome Controller</strong> is an adapter that allows you to play any retro video game system with modern Bluetooth controllers, like the Sony Dualshock 3 and the Nintendo Wiimote.</p>
 
             <img src="/static/images/ac_explanation.gif">
           </div>
@@ -102,7 +113,7 @@
         <section class="videos">
           <div class="video">
             <h3>An Overview</h3>
-            <iframe src="http://www.youtube.com/embed/NGqAh-_saZc" frameborder="0" allowfullscreen></iframe>
+            <iframe src="http://www.youtube.com/embed/K4YggRKspmg" frameborder="0" allowfullscreen></iframe>
           </div>
         </section>
 
@@ -124,13 +135,39 @@
         </section>
 
         <section class="connect">
-          <div id="mailbox"></div>
+          <div id="signup">
+            <h3>Sign up for our mailing list!</h3>
+            <form method="post" enctype="multipart/form-data"
+              action="http://www.formstack.com/forms/index.php"
+              class="fsForm fsSingleColumn form-horizontal" id="fsForm11"
+              onsubmit="$('#signup').hide(); _gaq.push(['_trackEvent', 'email submission', 'home page', $('#field13781724').val()]);"
+              target="_blank">
+              <input type="hidden" name="form" value="1139485" />
+              <input type="hidden" name="viewkey" value="EjlJHQApYh" />
+              <input type="hidden" name="hidden_fields" id="hidden_fields1139485" value="" />
+              <input type="hidden" name="_submit" value="1" />
+              <input type="hidden" name="incomplete" id="incomplete1139485" value="" />
+              <div class="control-group">
+                <div class="controls">
+                  <input type="text" id="field13781724" name="field13781724" placeholder="Email" required="required" />
+                  <input id="fsSubmitButton1139485" type="submit" value="Hook me up!" />
+                </div>
+              </div>
+            </form>
+          </div>
           <div class="social">
             <a class="twitter" href="http://twitter.com/#!/awesomecontrol">Twitter</a>
             <a class="facebook" href="http://www.facebook.com/pages/Awesome-Controller/219531528116786">Facebook</a>
             <a class="github" href="https://github.com/AwesomeController">Github</a>
             <a class="google_plus" href="https://plus.google.com/u/0/107680898870883767236">Google Plus</a>
             <a class="blog" href="http://blog.awesomecontroller.com/"></a>
+          </div>
+          <div id="mailbox"></div>
+        </section>
+
+        <section class="signoff">
+          <div class="back-us">
+            <a href="http://www.kickstarter.com/projects/1604893288/awesome-controller">Back us on Kickstarter</a>
           </div>
         </section>
       </div>
@@ -142,17 +179,5 @@
     </footer>
 
     <div id="alex"></div>
-
-    <script type="text/javascript">
-      function validateForm() {
-        var val = $('#field13781724').val();
-        if (val === 'undefined' || val === '' || val == null) {
-          alert('Please fill in your email so we can contact you. Thanks!');
-          return false;
-        } else {
-          return true;
-        }
-      }
-    </script>
   </body>
 </html>
