@@ -57,6 +57,7 @@
         );
 
         $('#mailbox').click(function() {
+          _gaq.push(['_trackEvent', 'opened mailbox', 'home page', $('#field13781724').val()]);
           $('#signup').toggle();
         });
 
