@@ -243,7 +243,7 @@ header .team{
 }
 
 .connect {
-  min-width: 2000px;
+  min-width: 1500px;
 }
 
 .social {
@@ -296,13 +296,13 @@ header .team{
 
 .social a.google_plus {
   position: absolute;
-  left: 1100px;
-  bottom: -4px;
-  width: 232px;
-  height: 192px;
+  left: 700px;
+  bottom: 0px;
+  width: 84px;
+  height: 124px;
   z-index: 10;
   text-indent: -9999px;
-  background-image: url('/static/images/google_plus_flag.png');
+  background-image: url('/static/images/google_plus_exit_mouse.png');
 }
 
 #mailbox {
@@ -338,6 +338,28 @@ header .team{
 
 .connect input[type=submit] {
   font-size: 24px;
+}
+
+.signoff {
+  min-width: 2000px;
+}
+
+.signoff .back-us {
+  position: absolute;
+  bottom: 99px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 1000px;
+  height: 128px;
+  background: url('/static/images/sign.png') 700px bottom no-repeat;
+}
+
+.signoff .back-us a {
+  position: absolute;
+  bottom: 97px;
+  left: 730px;
+  color: white;
+  text-decoration: none;
 }
 
 .cloud{
