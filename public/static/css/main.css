@@ -24,7 +24,7 @@
 
 .level{
   display: table-row;
-  background: transparent url('/static/images/street.png') bottom left repeat-x;
+  background: transparent url('/static/images/sidewalk_and_street.png') bottom left repeat-x;
 }
 
 .button{
@@ -47,34 +47,33 @@
 
 header, section{
   display: table-cell;
-  position: relative;
   min-width: 1024px; /* tmp */
+}
+
+section > div {
+  position: absolute;
+  min-width: 1024px;
+  bottom: 0px;
 }
 
 header{
   text-align: center;
   padding-top: 3%;
   min-width: 1024px;
+  background: transparent url('/static/images/grass_and_ground.png') bottom left repeat-x;
 }
 
 
-header:before, section:before{
+header > div:before, section > div:before {
   position: absolute;
   width: 100%;
   content: "";
   z-index: 12;
 }
 
-header:before{
-  height: 100px;
-  bottom: 0;
-  background: transparent url('/static/images/grass_and_ground.png') 0 90% repeat-x;
-}
-
-section:before{
+section > div:before {
   height: 64px;
   bottom: 61px;
-  background: url('/static/images/sidewalk_new@4x.png') 0 90% repeat-x;
 }
 
 section.explanation .graphic{
@@ -100,7 +99,7 @@ section.explanation .graphic img{
   margin-top: 25px;
 }
 
-section.explanation:after{
+section.explanation > div:after {
   position: absolute;
   width: 240px;
   height: 100px;
@@ -137,10 +136,10 @@ section.explanation:after{
   border: 4px solid black;
 }
 
-header .team{
+header .team {
   position: absolute;
   bottom: 83px;
-  left: 30%;
+  left: 350px;
   z-index: 13;
 }
 
