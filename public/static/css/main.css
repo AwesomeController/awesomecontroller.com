@@ -381,6 +381,15 @@ form .controls input[type=email] {
   z-index: 15;
 }
 
+#tunnel_cover{
+  position: absolute;
+  height: 1200px;
+  width: 1000px;
+  bottom: 0;
+  background: url('/static/images/tunnel_front.png') bottom right no-repeat;
+  z-index: 1700;
+}
+
 .cloud{
   position: relative;
   width: 100px;

@@ -43,6 +43,9 @@
       }
 
       $(document).ready(function(){
+
+        $('#tunnel_cover').css('left', $('#container').width() - 600);
+
         // clouds!
         var count = 0,
             max   = $('header,section').length * Math.ceil(Math.random()*5),
@@ -217,5 +220,6 @@
     </footer>
 
     <div id="alex"></div>
+    <div id="tunnel_cover"></div>
   </body>
 </html>
