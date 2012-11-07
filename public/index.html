@@ -23,12 +23,11 @@
     <script type="text/javascript">
       function updateKeepMoving(ticks, lastKnownHorizontalPosition) {
         var $keepMoving = $('#keep-moving'), currentPosition = $(document).scrollLeft();
-        var endOfPageX = $('.level').width() - window.innerWidth;
 
         if (currentPosition == lastKnownHorizontalPosition) {
           ticks++;
           if (currentPosition == 0 && ticks == 60 ||
-              currentPosition < endOfPageX - 500 && ticks == 110) {
+              currentPosition < 2000 && ticks == 110) {
             // reload with query string so we don't start in the middle of the animation
             $keepMoving.css({ backgroundImage: "url('/static/images/keep_moving.gif?q=" + new Date().getTime() + "')" });
             $keepMoving.show();
