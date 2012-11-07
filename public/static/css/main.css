@@ -263,7 +263,7 @@ header .team{
 
 .social a.twitter {
   position: absolute;
-  left: 522px;
+  left: 462px;
   bottom: 148px;
   width: 80px;
   height: 80px;
@@ -274,7 +274,7 @@ header .team{
 
 .social a.facebook {
   position: absolute;
-  left: 420px;
+  left: 360px;
   bottom: 130px;
   width: 118px;
   height: 100px;
@@ -285,8 +285,8 @@ header .team{
 
 .social a.github {
   position: absolute;
-  left: 430px;
-  bottom: 40px;
+  left: 370px;
+  bottom: 30px;
   width: 108px;
   height: 64px;
   z-index: 12;
@@ -301,11 +301,11 @@ header .team{
 
 .social a.google_plus {
   position: absolute;
-  left: 250px;
+  left: 190px;
   bottom: 0px;
   width: 84px;
   height: 124px;
-  z-index: 10;
+  z-index: 12;
   text-indent: -9999px;
   background-image: url('/static/images/google_plus_exit_mouse.png');
 }
@@ -321,15 +321,15 @@ header .team{
 
 #signup {
   display: none;
-  background-color: #eec;
+  background-color: #EEC;
   border: 3px #333 solid;
-  padding: 5px;
+  padding: 20px;
   position: absolute;
-  left: 500px;
-  bottom: 95px;
-  width: 240px;
-  height: 180px;
-  z-index: 12;
+  left: -120px;
+  bottom: 250px;
+  width: 320px;
+  height: 130px;
+  z-index: 1000;
 }
 
 #field13781724 {
@@ -340,8 +340,17 @@ header .team{
   font-family: 'Helvetica Neue', Arial;
 }
 
+form .controls {
+  text-align: center;
+}
+
+form .controls input[type=email] {
+  width: 310px;
+}
+
 .connect input[type=submit] {
   font-size: 24px;
+  background-color: #088025;
 }
 
 .signoff {
