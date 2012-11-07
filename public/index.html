@@ -23,13 +23,20 @@
     <script type="text/javascript">
       function updateKeepMoving(ticks, lastKnownHorizontalPosition) {
         var $keepMoving = $('#keep-moving'), currentPosition = $(document).scrollLeft();
+        var endOfPageX = $('.level').width() - window.innerWidth;
 
         if (currentPosition == lastKnownHorizontalPosition) {
           ticks++;
-          if (currentPosition == 0 && ticks == 60 || currentPosition < 6000 && ticks == 110) {
+          if (currentPosition == 0 && ticks == 60 ||
+              currentPosition < endOfPageX - 500 && ticks == 110) {
             // reload with query string so we don't start in the middle of the animation
             $keepMoving.css({ backgroundImage: "url('/static/images/keep_moving.gif?q=" + new Date().getTime() + "')" });
             $keepMoving.show();
+          }
+          if (currentPosition >= endOfPageX - 25) {
+            $(document).scrollLeft(currentPosition - 250);
+            window.location = 'http://www.kickstarter.com/projects/1604893288/awesome-controller/?ref=awesomecontroller.com';
+            return;
           }
         } else { // we moved, so don't show again for awhile
           $keepMoving.css({ backgroundImage: 'none' });
