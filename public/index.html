@@ -29,7 +29,7 @@
 
         if (currentPosition == lastKnownHorizontalPosition) {
           ticks++;
-          if (currentPosition == 0 && ticks == 60 ||
+          if (currentPosition == 0 && ticks == 25 ||
               currentPosition < middle && ticks == 110) {
             // reload with query string so we don't start in the middle of the animation
             $keepMoving.css({ backgroundImage: "url('/static/images/keep_moving.gif?q=" + new Date().getTime() + "')" });
