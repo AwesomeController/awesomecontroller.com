@@ -391,13 +391,22 @@ form .controls input[type=email] {
 }
 
 #alex{
-  width: 150px;
+  width: 116px;
   height: 160px;
   bottom: 140px;
   right: 15%;
   background: transparent url('/static/images/alex_flat_animated.gif') top left no-repeat;
   position: fixed;
   z-index: 13;
+}
+
+#alex.left {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
 
 #alex:hover{

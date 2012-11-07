@@ -33,6 +33,7 @@
             $keepMoving.show();
           }
         } else { // we moved, so don't show again for awhile
+          $('#alex').toggleClass('left', currentPosition < lastKnownHorizontalPosition);
           $keepMoving.css({ backgroundImage: 'none' });
           $keepMoving.hide();
           ticks = 0;
