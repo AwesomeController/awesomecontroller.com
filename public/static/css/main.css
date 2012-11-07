@@ -141,6 +141,7 @@ section.explanation:after{
 .video iframe {
   width: 320px;
   height: 180px;
+  margin-top: 15px;
   border: 4px solid black;
 }
 
