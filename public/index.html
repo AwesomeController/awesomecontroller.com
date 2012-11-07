@@ -33,11 +33,6 @@
             $keepMoving.css({ backgroundImage: "url('/static/images/keep_moving.gif?q=" + new Date().getTime() + "')" });
             $keepMoving.show();
           }
-          if (currentPosition >= endOfPageX - 25) {
-            $(document).scrollLeft(currentPosition - 250);
-            window.location = 'http://www.kickstarter.com/projects/1604893288/awesome-controller/?ref=awesomecontroller.com';
-            return;
-          }
         } else { // we moved, so don't show again for awhile
           $keepMoving.css({ backgroundImage: 'none' });
           $keepMoving.hide();
