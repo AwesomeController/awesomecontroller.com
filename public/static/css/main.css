@@ -365,13 +365,13 @@ form .controls input[type=email] {
 
 .signoff .tunnel {
   position: absolute;
-  bottom: -36px;
-  left: 100px;
+  bottom: 0;
+  left: 500px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   width: 1500px;
   height: 1200px;
-  background: url('/static/images/tunnel.png') 700px bottom no-repeat;
+  background: url('/static/images/tunnel2.png') bottom right no-repeat;
   z-index: 15;
 }
 
