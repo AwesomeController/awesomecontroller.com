@@ -71,6 +71,12 @@ header > div:before, section > div:before {
   z-index: 12;
 }
 
+.title-screen {
+  position: absolute;
+  bottom: 300px;
+  left: 300px;
+}
+
 section > div:before {
   height: 64px;
   bottom: 61px;
@@ -390,7 +396,7 @@ form .controls input[type=email] {
   overflow: hidden;
 }
 
-#alex{
+#alex {
   width: 116px;
   height: 160px;
   bottom: 140px;
