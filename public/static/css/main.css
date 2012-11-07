@@ -445,3 +445,12 @@ footer {
 #sky.day { background: #dff1fb; }
 #sky.night { background: #221250; }
 #sky.dusk { background: #994433; }
+
+#keep-moving {
+  top: 100px;
+  right: 60px;
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  z-index: 100;
+}

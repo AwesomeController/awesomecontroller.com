@@ -21,6 +21,25 @@
     <script type="text/javascript" src="/static/js/horizontal-scroll.js"></script>
 
     <script type="text/javascript">
+      function updateKeepMoving(ticks, lastKnownHorizontalPosition) {
+        var $keepMoving = $('#keep-moving'), currentPosition = $(document).scrollLeft();
+
+        if (currentPosition == lastKnownHorizontalPosition) {
+          ticks++;
+          if (currentPosition == 0 && ticks == 60 || currentPosition < 6000 && ticks == 110) {
+            // reload with query string so we don't start in the middle of the animation
+            $keepMoving.css({ backgroundImage: "url('/static/images/keep_moving.gif?q=" + new Date().getTime() + "')" });
+            $keepMoving.show();
+          }
+        } else { // we moved, so don't show again for awhile
+          $keepMoving.css({ backgroundImage: 'none' });
+          $keepMoving.hide();
+          ticks = 0;
+          lastKnownHorizontalPosition = currentPosition;
+        }
+        setTimeout('updateKeepMoving(' + ticks + ', ' + lastKnownHorizontalPosition + ')', 100);
+      }
+
       $(document).ready(function(){
         // clouds!
         var count = 0,
@@ -66,6 +85,8 @@
             $('#signup').hide();
           }
         });
+
+        setTimeout('updateKeepMoving(0, 0)', 100);
       });
     </script>
     <!-- google analytics -->
@@ -85,6 +106,7 @@
   <body>
     <div id="sky" class="day"></div>
     <div id="time-of-day-toggle" class="day"></div>
+    <div id="keep-moving"></div>
     <div id="container">
       <div class="level">
         <header>
