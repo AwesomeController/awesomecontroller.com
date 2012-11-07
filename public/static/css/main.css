@@ -100,18 +100,6 @@ section.explanation .graphic img{
   margin-top: 25px;
 }
 
-/*section.videos:after{
-  position: absolute;
-  width: 180px;
-  height: 100px;
-  left: 0;
-  bottom: 0;
-  content: "";
-  z-index: 12;
-<<<<<<< HEAD
-  background: transparent url('/static/images/grass_to_sidewalk.png') 0 90% no-repeat;
-}*/
-
 section.explanation:after{
   position: absolute;
   width: 240px;
