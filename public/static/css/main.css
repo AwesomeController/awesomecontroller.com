@@ -48,13 +48,13 @@
 header, section{
   display: table-cell;
   position: relative;
-  min-width: 1000px; /* tmp */
+  min-width: 1024px; /* tmp */
 }
 
 header{
   text-align: center;
   padding-top: 3%;
-  min-width: 1000px;
+  min-width: 1024px;
 }
 
 
@@ -123,6 +123,10 @@ section.explanation:after{
   background: transparent url('/static/images/road_transition.png') 0 90% no-repeat;
 }
 
+.videos {
+  min-width: 1024px;
+}
+
 .video{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -153,7 +157,7 @@ header .team{
 }
 
 .features{
-  min-width: 2000px;
+  min-width: 1790px;
 }
 
 .feature{
@@ -244,7 +248,7 @@ header .team{
 }
 
 .connect {
-  min-width: 1500px;
+  min-width: 640px;
 }
 
 .social {
@@ -254,12 +258,12 @@ header .team{
   -moz-box-sizing: border-box;
   width: 1200px;
   height: 496px;
-  background: url('/static/images/tree.png') 700px bottom no-repeat;
+  background: url('/static/images/tree.png') 200px bottom no-repeat;
 }
 
 .social a.twitter {
   position: absolute;
-  left: 1022px;
+  left: 522px;
   bottom: 148px;
   width: 80px;
   height: 80px;
@@ -270,7 +274,7 @@ header .team{
 
 .social a.facebook {
   position: absolute;
-  left: 920px;
+  left: 420px;
   bottom: 130px;
   width: 118px;
   height: 100px;
@@ -281,7 +285,7 @@ header .team{
 
 .social a.github {
   position: absolute;
-  left: 930px;
+  left: 430px;
   bottom: 40px;
   width: 108px;
   height: 64px;
@@ -297,7 +301,7 @@ header .team{
 
 .social a.google_plus {
   position: absolute;
-  left: 750px;
+  left: 250px;
   bottom: 0px;
   width: 84px;
   height: 124px;
@@ -308,7 +312,6 @@ header .team{
 
 #mailbox {
   position: absolute;
-  left: 500px;
   bottom: 95px;
   width: 80px;
   height: 160px;
@@ -342,7 +345,7 @@ header .team{
 }
 
 .signoff {
-  min-width: 2000px;
+  min-width: 1600px;
 }
 
 .signoff .back-us {
@@ -367,7 +370,7 @@ header .team{
 .signoff .tunnel {
   position: absolute;
   bottom: -36px;
-  left: 500px;
+  left: 100px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   width: 1500px;
