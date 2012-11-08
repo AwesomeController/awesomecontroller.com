@@ -43,7 +43,6 @@ def s3_deploy(aws_access_key_id, aws_secret_access_key, s3_bucket, public_dir)
   Dir.glob("#{public_dir}/**/*").each do |file|
     if File.file?(file)
       remote_file = file.gsub("#{public_dir}/", "")
-      puts "Getting key"
       key = bucket.key(remote_file, true)
       if !key || (key.e_tag != ("\"" + Digest::MD5.hexdigest(File.read(file))) + "\"")
         puts "Deploying file #{remote_file}"
