@@ -310,6 +310,7 @@ header .team {
   height: 160px;
   z-index: 11;
   background-image: url('/static/images/mailbox.gif');
+  cursor: pointer;
 }
 
 #signup {
