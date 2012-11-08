@@ -11,8 +11,8 @@ task :preview do
   rackupPid = spawn("rackup --port #{server_port}")
 
   trap("INT") {
-	Process.kill(9, rackupPid)
-	exit 0
+    Process.kill(9, rackupPid)
+    exit 0
   }
 
   Process.wait
@@ -45,12 +45,14 @@ def s3_deploy(aws_access_key_id, aws_secret_access_key, s3_bucket, public_dir)
       remote_file = file.gsub("#{public_dir}/", "")
       key = bucket.key(remote_file, true)
       if !key || (key.e_tag != ("\"" + Digest::MD5.hexdigest(File.read(file))) + "\"")
-        puts "Deploying file #{remote_file}"
+        puts "Deploying changed/new file: #{remote_file}"
         bucket.put(key, open(file), {}, 'public-read', {
           'content-type'        => MIME::Types.type_for(file).first.to_s,
           'x-amz-storage-class' => 'REDUCED_REDUNDANCY'
         })
         paths_to_invalidate << "/#{remote_file}"
+      else
+        puts "Has not changed: #{remote_file}"
       end
     end
   end
