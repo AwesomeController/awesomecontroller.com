@@ -23,9 +23,9 @@
     <script type="text/javascript">
       function updateKeepMoving(ticks, lastKnownHorizontalPosition) {
         var $keepMoving = $('#keep-moving'), currentPosition = $(document).scrollLeft(),
-            middle = ($(container).width() - window.innerWidth) / 2;
+            middle = ($(document).width() - window.innerWidth) / 2,
+            endOfScreenX = ($(document).width() - window.innerWidth);
 
-        console.log($keepMoving.find('.message'));
         $keepMoving.find('.message').toggle(currentPosition == 0);
         if (currentPosition == lastKnownHorizontalPosition) {
           ticks++;
@@ -34,6 +34,14 @@
             // reload with query string so we don't start in the middle of the animation
             $keepMoving.css({ backgroundImage: "url('/static/images/keep_moving.gif?q=" + new Date().getTime() + "')" });
             $keepMoving.show();
+          }
+          if (currentPosition > endOfScreenX - 5) {
+            $(document).scrollLeft(currentPosition - 20);
+            if (confirm("Alex says: \"It's dark and scary in here, should we go to the Kickstarter?\"")) {
+              window.location = 'http://www.kickstarter.com/projects/1604893288/awesome-controller/?ref=awesomecontroller.com'
+            } else {
+              $(document).scrollLeft(currentPosition - 20);
+            }
           }
         } else { // we moved, so don't show again for awhile
           $('#alex').toggleClass('left', currentPosition < lastKnownHorizontalPosition);
