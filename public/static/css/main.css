@@ -474,4 +474,13 @@ footer {
   height: 200px;
   position: fixed;
   z-index: 100;
+  display: none;
+}
+
+#keep-moving div {
+  position: absolute;
+  top: 200px;
+  padding: 5px;
+  border: 2px solid #000;
+  background-color: #eee;
 }
