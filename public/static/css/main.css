@@ -477,7 +477,7 @@ footer {
   display: none;
 }
 
-#keep-moving div {
+#keep-moving .message {
   position: absolute;
   top: 200px;
   padding: 5px;

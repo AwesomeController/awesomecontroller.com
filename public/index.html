@@ -25,6 +25,8 @@
         var $keepMoving = $('#keep-moving'), currentPosition = $(document).scrollLeft(),
             middle = ($(container).width() - window.innerWidth) / 2;
 
+        console.log($keepMoving.find('.message'));
+        $keepMoving.find('.message').toggle(currentPosition == 0);
         if (currentPosition == lastKnownHorizontalPosition) {
           ticks++;
           if (currentPosition == 0 && ticks == 25 ||
@@ -113,7 +115,7 @@
     <div id="sky" class="day"></div>
     <div id="time-of-day-toggle" class="day"></div>
     <div id="keep-moving">
-      <div>
+      <div class="message">
         Use the arrow keys or tap/scroll to move left and right.
       </div>
     </div>
